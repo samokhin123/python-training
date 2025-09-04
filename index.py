@@ -1,18 +1,23 @@
-text="Программирование - это процесс создания программ. Программирование помогает автоматизировать работу. Программирование интересно и полезно!"
-text=text.split(" ")
-text.remove("-")
-text2=set(text)
-print(len(text2))
-c=0
-b=0
-for i in text2:
-    a= len(i)
-    if a > c:
-        c=a
-        b=i
-print("Самое длинное слово:", b, "длина слова:", c)
-def len_word (d):
-    g=len(d)
-    return g
-len_word=len_word(str(input()))
-print("длина слова:", len_word)
+city1 = "Москва - Россия - 12500000"
+city2 = "Париж - Франция - 2148271"
+city3 = "Токио - Япония - 13969100"
+city4 = "Нью-Йорк - США - 8537673"
+city5 = "Лондон - Великобритания - 8825000"
+def check_city(a):
+    a = a.split(" - ")
+    a.pop(2)
+    if a[0][0] == "М" or a[0][0] == "м":
+        a = " - ".join(a)
+        a=a.upper()
+        return a
+    if len(a[0].split("-")) >= 2:
+        a = " - ".join(a)
+        a=a.lower()
+        return a
+check=check_city(city1)
+print(check)
+def print_city(a):
+    a=a.split(" - ")
+    b=". ".join(a)
+    return b
+print(print_city(city1))
