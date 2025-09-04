@@ -1,0 +1,2 @@
+a="seal"
+print(a)
